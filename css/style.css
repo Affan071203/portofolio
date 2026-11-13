@@ -10,23 +10,27 @@
   --bg-card: rgba(30, 41, 59, 0.7);
   --bg-card-hover: rgba(51, 65, 85, 0.85);
   --bg-glass: rgba(15, 23, 42, 0.75);
-  
+
   --text-primary: #f8fafc;
   --text-secondary: #94a3b8;
   --text-muted: #64748b;
-  
-  --brand-primary: #38bdf8;       /* Tech Sky Blue */
-  --brand-secondary: #818cf8;     /* Indigo */
+
+  --brand-primary: #38bdf8;
+  /* Tech Sky Blue */
+  --brand-secondary: #818cf8;
+  /* Indigo */
   --brand-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
-  
-  --cs-color: #10b981;            /* Emerald for Customer Service / Support */
+
+  --cs-color: #10b981;
+  /* Emerald for Customer Service / Support */
   --cs-glow: rgba(16, 185, 129, 0.25);
-  --mkt-color: #f59e0b;           /* Amber / Gold for Marketing & Sales */
+  --mkt-color: #f59e0b;
+  /* Amber / Gold for Marketing & Sales */
   --mkt-glow: rgba(245, 158, 11, 0.25);
-  
+
   --border-color: rgba(148, 163, 184, 0.12);
   --border-highlight: rgba(56, 189, 248, 0.35);
-  
+
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
   --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.5);
@@ -39,7 +43,7 @@
 
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
-  
+
   --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   --nav-height: 74px;
 }
@@ -51,14 +55,14 @@
   --bg-card: rgba(255, 255, 255, 0.85);
   --bg-card-hover: rgba(241, 245, 249, 0.95);
   --bg-glass: rgba(255, 255, 255, 0.85);
-  
+
   --text-primary: #0f172a;
   --text-secondary: #475569;
   --text-muted: #94a3b8;
-  
+
   --border-color: rgba(203, 213, 225, 0.8);
   --border-highlight: rgba(2, 132, 199, 0.5);
-  
+
   --shadow-sm: 0 2px 6px rgba(15, 23, 42, 0.05);
   --shadow-md: 0 8px 20px rgba(15, 23, 42, 0.08);
   --shadow-lg: 0 16px 32px rgba(15, 23, 42, 0.12);
@@ -79,7 +83,9 @@
 }
 
 /* Base Reset */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -105,7 +111,12 @@ body {
 }
 
 /* Typography Defaults */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
   line-height: 1.25;
   color: var(--text-primary);
@@ -121,7 +132,8 @@ p {
   color: var(--text-secondary);
 }
 
-img, svg {
+img,
+svg {
   display: block;
   max-width: 100%;
 }
@@ -382,9 +394,20 @@ button {
 }
 
 @keyframes pulse {
-  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-  70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
-  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
 }
 
 .hero-name {
@@ -508,8 +531,13 @@ button {
 }
 
 @keyframes spinSlow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .avatar-img {
@@ -521,67 +549,6 @@ button {
   border: 4px solid var(--bg-secondary);
   box-shadow: var(--shadow-lg);
   background: #1e293b;
-}
-
-/* Floating Badges Container */
-.hero-badges-container {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-.floating-badge {
-  position: absolute;
-  pointer-events: auto;
-  background: var(--bg-card);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--border-highlight);
-  padding: 10px 16px;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-md);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  z-index: 10;
-  animation: floatBounce 4s ease-in-out infinite alternate;
-}
-
-.badge-top-right {
-  top: 10px;
-  right: -25px;
-}
-
-.badge-bottom-left {
-  bottom: 10px;
-  left: -25px;
-  animation-delay: -2s;
-}
-
-@keyframes floatBounce {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-8px); }
-}
-
-.badge-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: var(--radius-sm);
-  display: grid;
-  place-items: center;
-  font-size: 1.1rem;
-}
-
-.badge-text-primary {
-  font-size: 0.85rem;
-  font-weight: 800;
-  color: var(--text-primary);
-  line-height: 1.2;
-}
-
-.badge-text-sub {
-  font-size: 0.72rem;
-  color: var(--text-muted);
 }
 
 /* ==========================================================================
@@ -1300,10 +1267,25 @@ button {
   flex-shrink: 0;
 }
 
-.channel-wa { background: rgba(37, 211, 102, 0.15); color: #25d366; }
-.channel-mail { background: rgba(56, 189, 248, 0.15); color: #38bdf8; }
-.channel-in { background: rgba(10, 102, 194, 0.15); color: #0a66c2; }
-.channel-loc { background: rgba(245, 158, 11, 0.15); color: #f59e0b; }
+.channel-wa {
+  background: rgba(37, 211, 102, 0.15);
+  color: #25d366;
+}
+
+.channel-mail {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+}
+
+.channel-in {
+  background: rgba(10, 102, 194, 0.15);
+  color: #0a66c2;
+}
+
+.channel-loc {
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+}
 
 .channel-title {
   font-size: 0.82rem;
@@ -1328,6 +1310,7 @@ button {
   .contact-channels-grid {
     grid-template-columns: 1fr;
   }
+
   .contact-actions-row {
     flex-direction: column;
   }
@@ -1461,8 +1444,15 @@ button {
 }
 
 @keyframes slideInRight {
-  from { transform: translateX(100%); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 /* ==========================================================================
@@ -1491,26 +1481,6 @@ button {
     height: 220px;
   }
 
-  .hero-badges-container {
-    position: static;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 14px;
-    margin-top: 20px;
-    width: 100%;
-    max-width: 540px;
-  }
-
-  .floating-badge {
-    position: static;
-    animation: none;
-    flex: 1;
-    padding: 10px 14px;
-    text-align: left;
-    transform: none;
-  }
-
   .hero-cta-group {
     justify-content: center;
   }
@@ -1528,7 +1498,8 @@ button {
     --nav-height: 64px;
   }
 
-  html, body {
+  html,
+  body {
     overflow-x: hidden;
   }
 
@@ -1536,7 +1507,8 @@ button {
     height: var(--nav-height);
   }
 
-  .nav-links, .nav-actions .btn-cv {
+  .nav-links,
+  .nav-actions .btn-cv {
     display: none;
   }
 
@@ -1603,12 +1575,12 @@ button {
     font-size: 0.95rem;
   }
 
-  .hero-section, 
-  .about-section, 
-  .experience-section, 
-  .skills-section, 
-  .projects-section, 
-  .research-section, 
+  .hero-section,
+  .about-section,
+  .experience-section,
+  .skills-section,
+  .projects-section,
+  .research-section,
   .contact-section {
     padding: 56px 0;
   }
@@ -1627,17 +1599,6 @@ button {
     font-size: 0.94rem;
     line-height: 1.6;
     margin-bottom: 24px;
-  }
-
-  .hero-badges-container {
-    flex-direction: column;
-    max-width: 330px;
-    gap: 10px;
-  }
-
-  .floating-badge {
-    width: 100%;
-    box-sizing: border-box;
   }
 
   .hero-cta-group {
@@ -1856,10 +1817,6 @@ button {
     height: 180px;
   }
 
-  .hero-badges-container {
-    max-width: 100%;
-  }
-
   .value-card {
     padding: 20px 16px;
   }
@@ -1889,14 +1846,26 @@ button {
     background: #ffffff !important;
     color: #000000 !important;
   }
-  .site-header, .btn-theme-toggle, .btn-mobile-toggle, .hero-cta-group, .site-footer {
+
+  .site-header,
+  .btn-theme-toggle,
+  .btn-mobile-toggle,
+  .hero-cta-group,
+  .site-footer {
     display: none !important;
   }
+
   .container {
     max-width: 100% !important;
     padding: 0 !important;
   }
-  .hero-section, .about-section, .experience-section, .skills-section, .projects-section, .research-section {
+
+  .hero-section,
+  .about-section,
+  .experience-section,
+  .skills-section,
+  .projects-section,
+  .research-section {
     padding: 15px 0 !important;
   }
 }
