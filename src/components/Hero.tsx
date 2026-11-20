@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown, Download, Linkedin, Github, Mail, Phone, Sparkles, CheckCircle2 } from 'lucide-react';
-import { PERSONAL_INFO } from '../data/portfolioData';
+import { PERSONAL_INFO, getAssetUrl } from '../data/portfolioData';
 
 export const Hero: React.FC = () => {
   const scrollToProjects = () => {
@@ -130,7 +130,7 @@ export const Hero: React.FC = () => {
                   className="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105"
                   onError={(e) => {
                     // Fallback to avatar-square if needed
-                    (e.target as HTMLImageElement).src = '/assets/images/avatar-square.jpg';
+                    (e.target as HTMLImageElement).src = getAssetUrl('assets/images/avatar-square.jpg');
                   }}
                 />
 
