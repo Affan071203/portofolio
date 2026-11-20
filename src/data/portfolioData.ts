@@ -1,11 +1,12 @@
 import { ProjectItem, ExperienceItem, SkillCategory, EducationItem } from '../types';
 
-export const getAssetUrl = (path: string): string => {
-  const rawBase = import.meta.env.BASE_URL || './';
-  const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
-  const clean = path.startsWith('/') ? path.slice(1) : path;
-  return `${base}${clean}`;
-};
+import profilePhotoImg from '../assets/images/profile.jpg';
+import avatarSquareImg from '../assets/images/avatar-square.jpg';
+import projectWismaImg from '../assets/images/project-wisma-migas.jpeg';
+import projectKlinikImg from '../assets/images/project-klinik.jpeg';
+import projectBioskopImg from '../assets/images/project-bioskop.svg';
+import projectLazadaImg from '../assets/images/project-ml-lazada.jpeg';
+import cvPdfFile from '../assets/Affan_Agung_Prabowo_CV.pdf';
 
 export const PERSONAL_INFO = {
   name: "AFFAN AGUNG PRABOWO",
@@ -27,8 +28,9 @@ export const PERSONAL_INFO = {
     location: "Bojonegoro, East Java, Indonesia",
     status: "Available for Immediate Opportunities"
   },
-  cvPdf: getAssetUrl("assets/Affan_Agung_Prabowo_CV.pdf"),
-  profilePhoto: getAssetUrl("assets/images/profile.jpg")
+  cvPdf: cvPdfFile,
+  profilePhoto: profilePhotoImg,
+  avatarPhoto: avatarSquareImg
 };
 
 export const CORE_PILLARS = [
@@ -232,7 +234,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     problem: "The client operated with fragmented manual spreadsheets, causing booking overlaps, delayed billing reports, and miscommunication between reception and management.",
     solution: "Spearheaded the technical roadmap, designed intuitive workflow modules for reservations and reporting, and led full client validation sprints.",
     impact: "Eliminated double bookings completely, accelerated check-in processing by 60%, and empowered non-technical staff to operate system reporting independently.",
-    image: getAssetUrl("assets/images/project-wisma-migas.jpeg"),
+    image: projectWismaImg,
     technologies: ["PHP", "MySQL", "JavaScript", "Bootstrap", "Responsive UI"],
     role: "Project Manager & Solution Architect",
     client: "Wisma Migas 2",
@@ -248,7 +250,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     problem: "Patients experienced friction discovering service specializations and coordinating schedules over phone lines, burdening front-desk telephone reception.",
     solution: "Engineered a modern, responsive web application with accessible typography, smooth navigation, and direct WhatsApp-integrated reservation channels.",
     impact: "Increased online consultation requests by 45% and delivered a polished brand image that instilled patient confidence.",
-    image: getAssetUrl("assets/images/project-klinik.jpeg"),
+    image: projectKlinikImg,
     technologies: ["React.js", "Tailwind CSS", "Vite", "UX Research", "Mobile Responsive"],
     role: "Frontend Developer & UI Specialist",
     client: "Klinik Kesehatan & Terapi",
@@ -264,7 +266,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     problem: "Traditional movie applications often complicate finding the closest screening venue and lack trustworthy, spoiler-free audience feedback.",
     solution: "Designed and built a cross-platform mobile experience with geolocation theater lookup, interactive seat mapping previews, and a community rating feedback loop.",
     impact: "Delivered a rapid prototype with less than 2-second screen transitions and positive usability testing scores from 30+ trial participants.",
-    image: getAssetUrl("assets/images/project-bioskop.svg"),
+    image: projectBioskopImg,
     technologies: ["Flutter", "Dart", "Firebase", "Geolocation API", "Figma UI/UX"],
     role: "Mobile Developer & Product Innovator",
     year: "2024"
@@ -279,7 +281,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     problem: "Fake online reviews undermine consumer trust and distort digital marketing metrics, leading to poor purchase decisions.",
     solution: "Developed NLP and classification algorithms in Python to extract linguistic markers and sentiment anomalies from large-scale e-commerce datasets.",
     impact: "Successfully published in national accredited journal Sinta 3, providing data-driven recommendations for e-commerce integrity and consumer protection.",
-    image: getAssetUrl("assets/images/project-ml-lazada.jpeg"),
+    image: projectLazadaImg,
     technologies: ["Python", "Machine Learning", "Scikit-Learn", "NLP", "Pandas", "Data Visualization"],
     role: "Lead Researcher & Data Analyst",
     year: "2024"
