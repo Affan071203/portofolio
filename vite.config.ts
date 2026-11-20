@@ -7,6 +7,12 @@ export default defineConfig({
   base: '/portofolio/',
   server: {
     port: 3000,
-    host: true
+    host: true,
+    open: '/index.source.html'
+  },
+  build: {
+    rollupOptions: {
+      input: 'index.source.html'
+    }
   }
 });
