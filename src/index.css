@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+  
+  body {
+    background-color: #050B18;
+    color: #A7B1C2;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom glowing and glassmorphism utilities */
+.glass-panel {
+  background: rgba(13, 27, 53, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-pill {
+  background: rgba(13, 27, 53, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-card-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-hover:hover {
+  transform: translateY(-4px);
+  border-color: rgba(37, 99, 235, 0.4);
+  box-shadow: 0 12px 30px -10px rgba(37, 99, 235, 0.25);
+}
+
+.glow-blue {
+  box-shadow: 0 0 50px -10px rgba(37, 99, 235, 0.35);
+}
+
+.glow-blue-lg {
+  box-shadow: 0 0 100px -20px rgba(37, 99, 235, 0.45);
+}
+
+.glow-text {
+  text-shadow: 0 0 20px rgba(37, 99, 235, 0.5);
+}
+
+/* Topographic Contour Background Patterns */
+.bg-topo-dark {
+  background-color: #050B18;
+  background-image: 
+    radial-gradient(circle at 20% 15%, rgba(37, 99, 235, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 80% 85%, rgba(56, 189, 248, 0.08) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='800' viewBox='0 0 800 800'%3E%3Cpath fill='none' stroke='%2338BDF8' stroke-width='1.2' stroke-opacity='0.07' d='M0,100 C150,50 250,180 400,120 C550,60 650,150 800,100 M0,200 C150,150 250,280 400,220 C550,160 650,250 800,200 M0,300 C150,250 250,380 400,320 C550,260 650,350 800,300 M0,400 C150,350 250,480 400,420 C550,360 650,450 800,400 M0,500 C150,450 250,580 400,520 C550,460 650,550 800,500 M0,600 C150,550 250,680 400,620 C550,560 650,650 800,600 M0,700 C150,650 250,780 400,720 C550,660 650,750 800,700'/%3E%3Cpath fill='none' stroke='%232563EB' stroke-width='1' stroke-opacity='0.05' d='M0,150 C200,80 300,220 500,160 C700,100 750,200 800,170 M0,350 C200,280 300,420 500,360 C700,300 750,400 800,370 M0,550 C200,480 300,620 500,560 C700,500 750,600 800,570 M0,750 C200,680 300,820 500,760 C700,700 750,800 800,770'/%3E%3C/svg%3E");
+  background-size: cover, cover, 800px 800px;
+}
+
+.bg-topo-light {
+  background-color: #F8FAFC;
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(37, 99, 235, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(14, 165, 233, 0.04) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='800' viewBox='0 0 800 800'%3E%3Cpath fill='none' stroke='%230F172A' stroke-width='1.2' stroke-opacity='0.06' d='M0,100 C150,50 250,180 400,120 C550,60 650,150 800,100 M0,200 C150,150 250,280 400,220 C550,160 650,250 800,200 M0,300 C150,250 250,380 400,320 C550,260 650,350 800,300 M0,400 C150,350 250,480 400,420 C550,360 650,450 800,400 M0,500 C150,450 250,580 400,520 C550,460 650,550 800,500 M0,600 C150,550 250,680 400,620 C550,560 650,650 800,600 M0,700 C150,650 250,780 400,720 C550,660 650,750 800,700'/%3E%3C/svg%3E");
+  background-size: cover, cover, 800px 800px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050B18;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E3A6D;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2563EB;
+}
+
